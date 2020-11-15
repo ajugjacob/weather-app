@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="input-box">
+                <form method="POST">
+                    <input type="text" name="city" id="city"/>
+                    <div class="btn">
+                        <button class="btn">Add City</button>
+                    </div>
+                </form>
+            </div>
+            <div class="block">
+                <ul>
+                    {% for weather in weather_data %}
+                        <li>
+                            <div class="box">
+                                <div class="inner">
+                                    <ul>
+                                        <li>
+                                            <div class="icon">
+                                                <img src="{{weather.icon}}" alt="icon">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="content">
+                                                <h2>{{weather.city}}</h2>
+                                                <p>{{weather.temp}} Celsius</p>
+                                                <p>{{weather.desc}}</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

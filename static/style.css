@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.section {
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.block {
+    padding-top: 60px;
+}
+
+.input-box {
+    position: absolute;
+    display: inline-block;
+}
+
+.btn {
+    color:black;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 114.12px;
+    width: 270px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.container li {
+    padding: 20px;
+    list-style: none;
+}
+
+
+.inner li {
+    display: inline-block;
+}
+
