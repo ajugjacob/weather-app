@@ -5,9 +5,11 @@ DEBUG = True
 TESTING = False
 
 ## Run Flask
-### Run flask for develop
+### Run flask for development
 ```
+$ export FLASK_ENV=development
 $ python webapp/run.py
+
 ```
 In flask, Default port is `5000`
 
