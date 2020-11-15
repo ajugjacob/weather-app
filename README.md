@@ -1,7 +1,7 @@
 # Weather app
 
-##Flask settings
-DEBUG = True  # True/False
+## Flask settings
+DEBUG = True 
 TESTING = False
 
 ## Run Flask
