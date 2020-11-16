@@ -1,5 +1,8 @@
 # Weather app
 
+## Download Bulma
+(https://github.com/jgthms/bulma)
+
 ## Flask settings
 DEBUG = True 
 TESTING = False
