@@ -2,48 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='bulma/css/bulma.min.css') }}" />
     <title>Weather App</title>
 </head>
 <body>
-    <div class="section">
-        <div class="container">
-            <div class="input-box">
-                <form method="POST">
-                    <input type="text" name="city" id="city"/>
-                    <div class="btn">
-                        <button class="btn">Add City</button>
-                    </div>
-                </form>
-            </div>
-            <div class="block">
-                <ul>
-                    {% for weather in weather_data %}
-                        <li>
-                            <div class="box">
-                                <div class="inner">
-                                    <ul>
-                                        <li>
-                                            <div class="icon">
-                                                <img src="{{weather.icon}}" alt="icon">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="content">
-                                                <h2>{{weather.city}}</h2>
-                                                <p>{{weather.temp}} Celsius</p>
-                                                <p>{{weather.desc}}</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+    <div class="columns">
+        <div class="column"></div>
+        <div class="is-justify-content-center">
+            <div class="column">
+                <div class="block pl-2">
+                    <form method="POST">
+                        <div class="field has-addons">
+                            <div class="control">
+                              <input class="input is-small" type="text" name="city" placeholder="Find a city">
                             </div>
-                        </li>
-                    {% endfor %}
-                </ul>
+                            <div class="control">
+                              <button class="button is-info is-small">
+                                Search
+                              </button>
+                            </div>
+                          </div>
+                    </form>   
+                </div>
+                <div class="block p-2">
+                    <ul>
+                        {% for weather in weather_data %}
+                            <li>
+                                <div class="box box-link-hover-shadow mb-4">
+                                    <div class="is-align-self-center">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <div class="icon">
+                                                    <img src="{{weather.icon}}" alt="icon">
+                                                </div>
+                                            </div>    
+                                            <div class="media-content">
+                                                <div class="content">
+                                                    <h2 class="m-0 p-0">{{weather.city}}</h2>
+                                                    <p class="m-0 p-0">{{weather.temp}} Celsius</p>
+                                                    <p class="m-0 p-0">{{weather.desc}}</p>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>  
+        <div class="column"></div>
+    </div>
 </body>
 </html>
