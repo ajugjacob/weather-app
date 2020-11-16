@@ -1,7 +1,8 @@
 # Weather app
 
 ## Download Bulma
-(https://github.com/jgthms/bulma)
+Bulma is a free, open source CSS framework based on Flexbox
+https://github.com/jgthms/bulma
 
 ## Flask settings
 DEBUG = True 
