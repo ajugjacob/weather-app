@@ -19,4 +19,4 @@ $ python webapp/run.py
 ```
 In flask, Default port is `5000`
 
-Index Page:  `http://127.0.0.1:5000`
+Host:  `http://127.0.0.1:5000`
